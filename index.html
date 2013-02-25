@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0"/>
+<title>mobile scroller</title>
+<link href="skin/mb-base.css" rel="stylesheet" />
+<link href="skin/mb-index.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="header">爱稻草网</div>
+<div class="wrapper" id="container">
+	<div class="scroll_wrap" id="scroll_wrap">
+		<div class="s_col"><ul class="content_wrapper" id="inner0"></ul></div>
+		<div class="s_col center_col"><ul class="content_wrapper" id="inner1"></ul></div>
+		<div class="s_col"><ul class="content_wrapper" id="inner2"></ul></div>
+	</div>
+</div>
+<div class="footer">copyright &copy; idaocao.com.</div>
+<script type="text/template" id="tpl-list">
+<li class="item" onclick="console.info('onclick!');"><h3>{{title}}</h3><p>{{snip}}</p></li>
+</script>
+<script src="js/json2.js"></script>
+<script src="js/classList.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/heluyao_scroll.js"></script>
+<script>
+var cons = $id('cons');
+function cosonle(txt){
+	cons.innerHTML += txt+'<br>';
+}
+Lu_scroll();
+</script>
+</body>
+</html>
